@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="index.css" type="text/css" rel="stylesheet">
+</head>
+<body class="p-5 ">
+    <main class="max-w-6xl m-auto">
+        <div class="flex justify-between gap-2">
+            <input type="text" id="searchbox" placeholder="Type here" class="input input-bordered w-full mb-5" />
+            <button class="btn btn-neutral" id="vin-filter">Filter by Vin</button>
+            <!-- <button class="btn" id="check-api">Check auto API</button> -->
+            <button class="btn" onclick="my_modal_1.showModal()">Check auto API</button>
+            <button class="btn text-xl" id="reset">⟲</button>
+            <dialog id="my_modal_1" class="modal">
+            <div class="modal-box">
+                <h3 class="font-bold text-lg mb-5">List of product codes</h3>
+                <div class="bg-slate-800 rounded text-white p-5">
+                    4001187760<br/>
+                    2613947829<br/>
+                    2628575221<br/>
+                    8264293220<br/>
+                    9281980371<br/>
+                    0791300404<br/>
+                    6167291217<br/>
+                    4924472735<br/>
+                    5331393659<br/>
+                    7789767305<br/>
+                  </div>
+                <div class="modal-action">
+                    <button class="btn btn-neutral" id="check-api">Search by product codes</button>
+                    <button class="btn" onclick="my_modal_1.close()">Close</button>
+
+                </div>
+            </div>
+            </dialog>
+        </div>
+        <div id="hits"></div>
+    </main>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
